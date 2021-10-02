@@ -4,4 +4,6 @@ function addUser(){
 
     localStorage.setItem("player1_LS",player1_name);
     localStorage.setItem("player2_LS",player2_name);
+
+    window.location="game_page.html"
 }
