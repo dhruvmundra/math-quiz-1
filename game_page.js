@@ -7,7 +7,7 @@ P2_score=0;
 document.getElementById("player1_name").innerHTML=player1_name+" : ";
 document.getElementById("player2_name").innerHTML=player2_name+" : ";
 
-
+var correct_answer=0;
 
 document.getElementById("player1_score").innerHTML=P1_score;
 document.getElementById("player2_score").innerHTML=P2_score;
@@ -33,7 +33,10 @@ var quest_turn="player1";
 var answer_turn="player2";
 
 function check(){
-get_answer=document.getElementById("input_answer");
+    console.log("cheackcalled");
+get_answer=document.getElementById("input_answer").value;
+console.log("ca"+ correct_answer)
+console.log("ga"+ get_answer)
 if(get_answer==correct_answer){
     console.log("CORRECT ANSWER!!!"+correct_answer)
     if(answer_turn=="player1"){
@@ -58,5 +61,6 @@ else{
     document.getElementById("player_question").innerHTML="Question turn - "+ player1_name;
 document.getElementById("player_answer").innerHTML="Answer turn - "+ player2_name; 
 }
+document.getElementById("output").innerHTML="";
 
 }
